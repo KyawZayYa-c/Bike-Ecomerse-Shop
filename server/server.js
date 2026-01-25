@@ -5,7 +5,8 @@ const cors = require('cors');
 const authRouter = require('./routes/auth/auth-routes');
 const productsRouter = require('./routes/admin/products-routes');
 const shopProductsRouter = require('./routes/shop/products-routes');
-const shopCartRouter = require('./routes/shop/cart-routes')
+const shopCartRouter = require('./routes/shop/cart-routes');
+const shopAddressRouter = require('./routes/shop/address-routes');
 
 mongoose.connect('mongodb+srv://zayya4281:KyawZayYa1122@cluster0.gevpgb5.mongodb.net/ecomerse?retryWrites=true&w=majority')
 //mongoose.connect('mongodb://localhost:27017/eco')
@@ -35,6 +36,7 @@ app.use("/api/auth", authRouter)
 app.use("/api/admin/products", productsRouter);
 app.use("/api/shop/products", shopProductsRouter);
 app.use("/api/shop/cart", shopCartRouter);
+app.use("/api/shop/address", shopAddressRouter);
 
 app.listen(PORT , () => console.log("Server is running on port "+ PORT));
 
