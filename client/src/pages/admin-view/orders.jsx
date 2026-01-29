@@ -1,6 +1,8 @@
+import AdminOrdersView from "@/components/admin-view/order.jsx";
+
 function AdminOrders() {
     return <div>
-        admin Orders
+        <AdminOrdersView />
     </div>
 }
 

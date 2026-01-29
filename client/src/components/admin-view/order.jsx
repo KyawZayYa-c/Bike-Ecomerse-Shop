@@ -1,18 +1,19 @@
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card.jsx";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table.jsx";
 import {Button} from "@/components/ui/button.jsx";
-import {Dialog} from "@radix-ui/react-dialog";
-import ShoppingOrderDetailsView from "@/components/shopping-view/order_details.jsx";
+import {Dialog} from "@/components/ui/dialog.jsx";
 import {useState} from "react";
+import AdminOrderDetailsView from "@/components/admin-view/order_details.jsx";
 
-function ShoppingOrders(){
 
+function AdminOrdersView(){
     const [openDetailsDialog, setOpenDetailsDialog] = useState(false);
+console.log(openDetailsDialog);
 
     return(
         <Card>
             <CardHeader>
-                <CardTitle>Order History</CardTitle>
+                <CardTitle>All history</CardTitle>
             </CardHeader>
             <CardContent>
                 <Table>
@@ -32,9 +33,9 @@ function ShoppingOrders(){
                             <TableCell className={"text-left"} >In Process</TableCell>
                             <TableCell className={"text-left"} >$1000</TableCell>
                             <TableCell className={"text-left"} >
-                                <Dialog open = {openDetailsDialog} onOpenChange={setOpenDetailsDialog} >
-                                <Button onClick = {() => setOpenDetailsDialog(true)} >View Details</Button>
-                                <ShoppingOrderDetailsView />
+                                <Dialog open={openDetailsDialog} onOpenChange={setOpenDetailsDialog} >
+                                    <Button onClick = {() => setOpenDetailsDialog(true)} >View Details</Button>
+                                    <AdminOrderDetailsView />
                                 </Dialog>
                             </TableCell>
 
@@ -46,4 +47,4 @@ function ShoppingOrders(){
     )
 }
 
-export default ShoppingOrders;
+export default AdminOrdersView;
