@@ -1,5 +1,7 @@
 const paypal = require('../../helpers/paypal');
 const Order = require('../../models/Orders');
+const Cart = require('../../models/Cart');
+const Product = require('../../models/Product')
 
 const createOrder = async (req , res) => {
     try{
@@ -14,7 +16,8 @@ const createOrder = async (req , res) => {
             orderDate,
             orderUpdateDate,
             paymentId,
-            payerId
+            payerId,
+            cartId,
         } = req.body;
 
         const create_payment_json = {
@@ -65,7 +68,8 @@ const createOrder = async (req , res) => {
                     orderDate,
                     orderUpdateDate,
                     paymentId,
-                    payerId
+                    payerId,
+                    cartId,
                 })
 
                 await newlyCreatedOrder.save();
@@ -92,6 +96,45 @@ const createOrder = async (req , res) => {
 
 const capturePayment = async (req , res) => {
     try{
+        const {paymentId, payerId, orderId}  = req.body;
+        let order = await Order.findById(orderId);
+
+        if(!order){
+            return res.status(404).json({
+                success : false,
+                message : 'Order can not be found.'
+            })
+        }
+
+        order.paymentStatus = 'paid';
+        order.orderStatus = 'confirmed';
+        order.paymentId = paymentId;
+        order.payerId = payerId;
+
+        for(const item of order.cartItems){
+            let product = await Product.findById(item.productId);
+
+            if(!product){
+                return res.status(404).json({
+                    success : false,
+                    message : `Not enough stock for this product ${product.title}`
+                })
+            }
+
+            product.totalStock -= item.quantity;
+            await product.save();
+        }
+
+        const getCartId = order.cartId;
+        await Cart.findByIdAndDelete(getCartId);
+
+        await order.save();
+
+        res.status(200).json({
+            success : true,
+            message : 'Order confirmed!',
+            data : order
+        })
 
     }catch (err){
         console.log(err);
@@ -102,7 +145,62 @@ const capturePayment = async (req , res) => {
     }
 }
 
+
+const getAllOrdersByUser = async (req, res) => {
+    try{
+        const {userId} = req.params;
+        const order = await Order.find({userId});
+
+        if(!order){
+            return res.status(404).json({
+                success : false,
+                message : "Order not found"
+            })
+        }
+
+        res.status(200).json({
+            success: true,
+            data : order,
+        })
+    }catch (e){
+        console.log(e);
+        res.status(500).json({
+            success : false,
+            message : "Some Error Occured!",
+        })
+    }
+}
+
+
+const getOrdersDetails = async (req, res) => {
+    try{
+        const {id} = req.params;
+        const orders = await Order.findById(id);
+
+        if(!orders){
+            return res.status(404).json({
+                success : false,
+                message : "No orders found."
+            })
+        }
+
+        res.status(200).json({
+            success: true,
+            data : orders,
+        })
+
+    }catch (e){
+        console.log(e);
+        res.status(500).json({
+            success : false,
+            message : "Some Error Occured!",
+        })
+    }
+}
+
 module.exports = {
     createOrder,
     capturePayment,
+    getAllOrdersByUser,
+    getOrdersDetails,
 }

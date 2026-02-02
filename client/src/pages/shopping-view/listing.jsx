@@ -21,13 +21,15 @@ import {useToast} from "@/components/ui/use-toast.jsx";
 function ShoppingListing(){
     const dispatch = useDispatch();
     const {productList, productDetails} = useSelector(state => state.shopProducts);
+    const {cartItems} = useSelector(state => state.shopCart)
     const {user} = useSelector(state => state.auth);
-    const {cartItems} = useSelector(state => state.shopCart);
     const [filters, setFilters] = useState({});
     const [sort, setSort] = useState(null);
     const [searchParams, setSearchParams] = useSearchParams();
     const [openDetailsDialog, setOpenDetailsDialog] = useState(false);
     const {toast} = useToast();
+
+    const categorySearchParams = searchParams.get('category');
 
     function createSearchParamsHelper(filterParams){
         const queryParams = [];
@@ -74,8 +76,25 @@ function ShoppingListing(){
         dispatch(fetchProductDetails(getCurrentProductId))
     }
 
-    function handleAddtoCart(getCurrentProductId){
-        console.log(getCurrentProductId);
+    function handleAddtoCart(getCurrentProductId, getTotalStock){
+
+        let getCartItems = cartItems.items || [];
+
+        if(getCartItems.length){
+            const indexOfCurrentItem = getCartItems.findIndex(item => item.productId === getCurrentProductId);
+            if(indexOfCurrentItem > -1){
+                const getQuantity = getCartItems[indexOfCurrentItem].quantity;
+                if(getQuantity + 1 > getTotalStock){
+                    toast({
+                        title : `Only ${getQuantity} quantity can be added for this item.`,
+                        variant : 'destructive',
+                    });
+                    return;
+                }
+            }
+
+        }
+
         dispatch(addToCart(
             {
                 userId : user?.id,
@@ -97,12 +116,12 @@ function ShoppingListing(){
             const createQueryString = createSearchParams(filters);
             setSearchParams(new URLSearchParams(createQueryString));
         }
-    }, []);
+    }, [filters]);
 
     useEffect(() => {
         setSort("price-lowtohigh");
         setFilters(JSON.parse(sessionStorage.getItem('filters')) || {});
-    }, []);
+    }, [categorySearchParams]);
 
     useEffect(() => {
         if(filters !== null && sort !== null)
@@ -113,7 +132,7 @@ function ShoppingListing(){
         if(productDetails !== null) setOpenDetailsDialog(true);
     }, [productDetails]);
 
-
+console.log('productList : ', productList);
     return (
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 p-4 md:p-6" >
             <ProductFilter filters={filters} handleFilter={handleFilter} />
@@ -168,5 +187,3 @@ function ShoppingListing(){
 }
 
 export default ShoppingListing;
-
-//6 : 33

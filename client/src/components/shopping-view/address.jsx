@@ -77,7 +77,6 @@ function Address({currentSelectedAddress,setCurrentSelectedAddress}){
     }
 
     function handleDeleteAddress(getCurrentAddress){
-        console.log(getCurrentAddress);
 
         dispatch(deleteAddress({userId : user?.id, addressId : getCurrentAddress._id}))
             .then(
@@ -111,6 +110,7 @@ function Address({currentSelectedAddress,setCurrentSelectedAddress}){
                                 addressInfo={singleAddressItem}
                                 handleEditAddress={handleEditAddress}
                                 setCurrentSelectedAddress = {setCurrentSelectedAddress}
+                                currentSelectedAddress = {currentSelectedAddress}
                             />
                         )) : null
                 }

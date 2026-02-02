@@ -11,11 +11,12 @@ function AddressCard({addressInfo, handleEditAddress , handleDeleteAddress, curr
                 () => setCurrentSelectedAddress(addressInfo) : null}
 
 
-              className={`cursor-pointer p-0 border-2 ${
+              className={`cursor-pointer p-0 border-2  ${
                   currentSelectedAddress?._id === addressInfo?._id
-                      ? "border-red-600 shadow-lg" // ရွေးထားရင် အနားသတ်နီသွားမယ်
+                      ? "border-gray-600 border-3 shadow-lg" // ရွေးထားရင် အနားသတ်နီသွားမယ်
                       : "border-transparent"
               }`}
+
         >
             <CardContent className="grid p-4 gap-4" >
                 <Label>Address : {addressInfo?.address}</Label>

@@ -15,14 +15,15 @@ import ShoppingHome from "@/pages/shopping-view/home.jsx";
 import ShoppingListing from "@/pages/shopping-view/listing.jsx";
 import ShoppingCheckout from "@/pages/shopping-view/checkout.jsx";
 import ShoppingAccount from "@/pages/shopping-view/account.jsx";
-import Checkout from "@/pages/shopping-view/checkout.jsx";
 import CheckAuth from "@/components/common/check-auth.jsx";
 import UnauthPage from "@/pages/unauth-page/index.jsx";
 import {useDispatch, useSelector} from "react-redux";
-import checkout from "@/pages/shopping-view/checkout.jsx";
 import {checkAuth} from "@/store/auth_slice/index.js";
 import {useEffect} from "react";
 import { Skeleton } from "@/components/ui/skeleton"
+import PaypalReturnPage from "@/pages/shopping-view/paypal-return.jsx";
+import PaymentSuccessPage from "@/pages/shopping-view/payment-success.jsx";
+import SearchProducts from "@/pages/shopping-view/search.jsx";
 
 
 
@@ -40,6 +41,15 @@ function App() {
   return (
         <div className="flex flex-col overflow-hidden bg-white" >
             <Routes>
+                <Route
+                        path="/"
+                        element= {
+                    <CheckAuth isAuthenticated = { isAuthenticated} user = { user }  >
+
+                    </CheckAuth>
+                }
+                    />
+
                 <Route path="/auth" element={
                     <CheckAuth isAuthenticated = { isAuthenticated} user = { user }  >
                         <AuthLayout />
@@ -69,6 +79,9 @@ function App() {
                     <Route path="listing" element={ <ShoppingListing /> } />
                     <Route path="checkout" element={ <ShoppingCheckout /> } />
                     <Route path="account" element={ <ShoppingAccount /> } />
+                    <Route path="paypal-return" element={ <PaypalReturnPage /> } />
+                    <Route path="payment-success" element={ <PaymentSuccessPage /> } />
+                    <Route path="search" element={ <SearchProducts /> } />
                 </Route>
 
                 <Route path="/unauth-page" element={ <UnauthPage /> } />
@@ -81,4 +94,3 @@ function App() {
 
 export default App;
 
-//3 : 40min

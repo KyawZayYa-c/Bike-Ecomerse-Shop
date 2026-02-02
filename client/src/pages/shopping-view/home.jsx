@@ -1,6 +1,4 @@
-import bannerOne from '../../assets/banner-1.webp';
-import bannerTwo from '../../assets/banner-2.webp';
-import bannerThree from '../../assets/banner-3.webp';
+
 import {
     BabyIcon,
     ChevronLeftIcon,
@@ -22,6 +20,7 @@ import {addToCart, fetchCartItems} from "@/store/shop/cart-slice/index.js";
 import {useToast} from "@/components/ui/use-toast.jsx";
 import ProductDetailsDialog from "@/components/shopping-view/product-details.jsx";
 import productDetails from "@/components/shopping-view/product-details.jsx";
+import {getFeatureImages} from "@/store/common-slice/index.js";
 
 const categoriesWithIcon = [
     {id : "men", label : "Men", icon : ShirtIcon},
@@ -42,7 +41,6 @@ const brandsWithIcon = [
 
 function ShoppingHome(){
     const [currentSlide, setCurrentSlide] = useState(0);
-    const slides = [bannerOne,bannerTwo,bannerThree];
 
     const {productList, productDetails} = useSelector(state => state.shopProducts);
     const {user} = useSelector(state => state.auth);
@@ -50,6 +48,8 @@ function ShoppingHome(){
     const navigate = useNavigate();
     const {toast} = useToast();
     const [openDetailsDialog, setOpenDetailsDialog] = useState(false);
+    const {featureImageList} = useSelector(state => state.commonFeature);
+
 
     function handleNavigateToListingPage(getCurrentItem, section){
         sessionStorage.removeItem('filters');
@@ -82,6 +82,12 @@ function ShoppingHome(){
         });
     }
 
+
+    useEffect(() => {
+        dispatch(getFeatureImages())
+    }, [dispatch]);
+
+
     useEffect(() => {
         if(productDetails !== null) setOpenDetailsDialog(true);
     }, [productDetails]);
@@ -89,33 +95,30 @@ function ShoppingHome(){
     useEffect(()=> {
         const timmer = setInterval(() => {
             setCurrentSlide((prevSlide) =>
-                (prevSlide + 1) % slides.length );
+                (prevSlide + 1) % featureImageList.length );
         }, 5000);
         return () => clearInterval(timmer);
-    }, [])
+    }, [featureImageList])
 
     useEffect(() => {
        dispatch(fetchAllFilteredProducts(
            {filterParams : {}, sortParams : 'price-lowtohigh'}))
     }, [dispatch]);
 
-
-
-
-    console.log('productList', productList);
     return <div className="flex flex-col min-h-screen" >
                 <div  className="relative w-full h-[600px] overflow-hidden" >
                     {
-                        slides.map((slide, index) => <img
-                          src={slide}
-                          key={index}
+                        featureImageList && featureImageList.length > 1 ?
+                            featureImageList.map((slide, index) => <img
+                          src={slide.image}
+                          key={slide._id}
                           className = {`${index === currentSlide ? 'opacity-100' : 'opacity-0'} absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000`}
-                        />)
+                        />) : null
                     }
                     <Button
                         onClick={() => setCurrentSlide(
                             prevSlide =>
-                                (prevSlide -1 + slides.length) % slides.length)}
+                                (prevSlide -1 + featureImageList.length) % featureImageList.length)}
                         variant="outline"
                         size="icon"
                         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80">
@@ -124,7 +127,7 @@ function ShoppingHome(){
                     <Button
                         onClick={() => setCurrentSlide(
                             prevSlide =>
-                                (prevSlide +1 ) % slides.length)}
+                                (prevSlide +1 ) % featureImageList.length)}
                         variant="outline"
                         size="icon"
                         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80">
