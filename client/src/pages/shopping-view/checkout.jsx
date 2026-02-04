@@ -1,4 +1,4 @@
-import img from '../../assets/account.jpg';
+import img from '../../assets/Bike.jpg';
 import Address from "@/components/shopping-view/address.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import UserCartItemsContent from "@/components/shopping-view/cart-items-content.jsx";
@@ -17,7 +17,6 @@ function ShoppingCheckout(){
     const dispatch = useDispatch();
     const {toast} = useToast();
 
-    console.log('currentSelectedAddress', currentSelectedAddress);
 
     const totalCartAmount =
         cartItems && cartItems.items && cartItems.items.length > 0 ?
@@ -93,7 +92,7 @@ function ShoppingCheckout(){
 
 
     return <div className="flex flex-col" >
-            <div className="relative h-[300px] w-full overflow-hidden">
+            <div className="relative h-[350px] w-full overflow-hidden">
                 <img
                     src={img}
                     className='h-full w-full object-cover object-center'

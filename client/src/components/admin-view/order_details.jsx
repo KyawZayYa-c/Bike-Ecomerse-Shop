@@ -89,9 +89,9 @@ function AdminOrderDetailsView({orderDetails}) {
 
 
                 <div className="grid gap-4">
-                    <div className="grid gap-2">
+                    <div className="grid gap-1">
                         <div className="font-medium">Items Purchased</div>
-                        <ul className="grid gap-3">
+                        <ul className="grid gap-1">
                             {
                                 orderDetails?.cartItems && orderDetails?.cartItems.length > 0 ?
                                     orderDetails?.cartItems.map((item) => (

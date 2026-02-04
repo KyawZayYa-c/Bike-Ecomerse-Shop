@@ -1,4 +1,4 @@
-import accImg from '../../assets/account.jpg';
+import accImg from '../../assets/Bike.jpg';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs.jsx";
 import Address from "@/components/shopping-view/address.jsx";
 import ShoppingOrders from "@/components/shopping-view/order.jsx";
@@ -7,10 +7,11 @@ import ShoppingOrders from "@/components/shopping-view/order.jsx";
 function ShoppingAccount(){
     return (
         <div className="flex flex-col " >
-            <div className="relative h-[300px] w-full overflow-hidden ">
+            <div className="relative w-full overflow-hidden ">
                 <img
                     style = {{aspectRatio : '1600 / 300', objectFit : 'cover'}}
                     src={accImg}
+                    className={"w-full h-[350px] "}
                     />
             </div>
             <div className="container mx-auto grid grid-cols-1 gap-8 py-8 " >

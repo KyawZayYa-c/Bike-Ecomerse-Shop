@@ -30,7 +30,6 @@ function AdminDashboard() {
         dispatch(getFeatureImages())
     }, [dispatch]);
 
-    console.log(featureImageList, 'featureImageList');
 
 
     return <div>
@@ -45,7 +44,9 @@ function AdminDashboard() {
         />
         <Button
             onClick={handleUploadFeatureImage}
-            className={'mt-5 w-full'} >Upload</Button>
+            disabled = {imageLoadingState || !uploadedImageUrl}
+            className={'mt-5 w-full'} >Upload
+        </Button>
 
         <div className="flex flex-col gap-4 mt-5" >
             {

@@ -1,13 +1,18 @@
 
 import {
-    BabyIcon,
+
     ChevronLeftIcon,
     ChevronRightIcon,
-    CloudLightning,
-    ShirtIcon,
-    UmbrellaIcon,
-    WatchIcon,
-    Shirt, WashingMachine, ShoppingBasket, Airplay, Images, Heater
+    Bike,              // Super Bike အတွက်
+    Cylinder,          // Naked Bike (အင်ဂျင်) အတွက်
+    Map,               // Adventure (ခရီးသွား) အတွက်
+    HardHat,           // Helmet (ဦးထုပ်) အတွက်
+    ShieldCheck,       // Riding Gears (အကာအကွယ်) အတွက်
+    Zap,               // Kawasaki/Power အတွက်
+    Crown,             // Ducati/Premium အတွက်
+    Trophy,            // Yamaha/Racing အတွက်
+    Compass,           // BMW/Touring အတွက်
+    CheckCircle        // Honda/Reliable အတွက်
 } from "lucide-react";
 import {Button} from "@/components/ui/button.jsx";
 import {Card, CardContent} from "@/components/ui/card.jsx";
@@ -23,21 +28,21 @@ import productDetails from "@/components/shopping-view/product-details.jsx";
 import {getFeatureImages} from "@/store/common-slice/index.js";
 
 const categoriesWithIcon = [
-    {id : "men", label : "Men", icon : ShirtIcon},
-    {id : "women", label : "Women", icon : CloudLightning},
-    {id : "kids" , label : "Kids" , icon : BabyIcon},
-    {id : "accessories", label : "Accessories" , icon : WatchIcon},
-    {id : "footwear", label : "Footwear", icon : UmbrellaIcon}
-]
+    { id: "superbike", label: "Super Bike", icon: Bike },
+    { id: "nakedbike", label: "Naked Bike", icon: Cylinder },
+    { id: "adventure", label: "Adventure", icon: Map },
+    { id: "headwear", label: "Helmets", icon: HardHat },
+    { id: "riding-gears", label: "Riding Gears", icon: ShieldCheck }
+];
 
 const brandsWithIcon = [
-    {id : "nike", label : "Nike" , icon : Shirt},
-    {id : "adidas", label : "Adidas", icon : WashingMachine },
-    {id : "puma", label : "Puma" , icon : ShoppingBasket},
-    {id : "levi", label : "Levi", icon : Airplay},
-    {id : "zara", label : "Zara" , icon : Images},
-    {id : "h&m", label : "H&m", icon : Heater},
-]
+    { id: "kawasaki", label: "Kawasaki", icon: Zap },
+    { id: "yamaha", label: "Yamaha", icon: Trophy },
+    { id: "honda", label: "Honda", icon: CheckCircle },
+    { id: "ducati", label: "Ducati", icon: Crown },
+    { id: "bmw", label: "BMW", icon: Compass },
+    { id: "alpinestars", label: "Alpinestars", icon: ShieldCheck }
+];
 
 function ShoppingHome(){
     const [currentSlide, setCurrentSlide] = useState(0);

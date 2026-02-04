@@ -20,11 +20,13 @@ function AdminOrdersView(){
     }
 
     useEffect(() => {
+        dispatch(resetOrderDetails());
         dispatch(getAllOrdersForAdmin());
     }, [dispatch]);
 
     useEffect(() => {
         if(orderDetails !== null)  setOpenDetailsDialog(true);
+
     }, [orderDetails]);
     return(
         <Card>

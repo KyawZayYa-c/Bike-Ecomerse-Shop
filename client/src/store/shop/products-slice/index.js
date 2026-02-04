@@ -1,71 +1,74 @@
-import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
 const initialState = {
-    isLoading : false,
-    productList : [],
-    productDetails : null
-}
+    isLoading: false,
+    productList: [],
+    productDetails: null
+};
+
+// Accessing the environment variable from .env
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 export const fetchAllFilteredProducts = createAsyncThunk(
     '/products/fetchAllProducts',
-    async ({filterParams, sortParams}) =>
-    {
-        console.log(fetchAllFilteredProducts,  'fetchAllFilteredProducts');
+    async ({ filterParams, sortParams }) => {
         const query = new URLSearchParams({
             ...filterParams,
-            sortBy : sortParams,
-        })
+            sortBy: sortParams,
+        });
         const result = await axios.get(
-            `http://localhost:5000/api/shop/products/get?${query}`,
+            `${BASE_URL}/shop/products/get?${query}`
         );
         return result?.data;
     }
-)
+);
 
-export const fetchProductDetails  = createAsyncThunk(
+export const fetchProductDetails = createAsyncThunk(
     '/products/fetchProductDetails',
-    async (id) =>
-    {
+    async (id) => {
         const result = await axios.get(
-            `http://localhost:5000/api/shop/products/get/${id}`,
+            `${BASE_URL}/shop/products/get/${id}`
         );
         return result?.data;
     }
-)
+);
 
 const shoppingProductSlice = createSlice({
-      name : 'shoppingProducts',
-      initialState,
-      reducers : {
-          setProductDetails : (state) => {
-              state.productDetails = null
-          }
-      },
-      extraReducers : (builder) => {
-            builder.addCase(fetchAllFilteredProducts.pending, (state, action)=> {
-                state.isLoading = true
-            }).addCase(fetchAllFilteredProducts.fulfilled, (state, action)=> {
-                state.isLoading = false
-                state.productList = action.payload.data
-            }).addCase(fetchAllFilteredProducts.rejected, (state, action)=> {
-                state.isLoading = false
-                state.productList = []
+    name: 'shoppingProducts',
+    initialState,
+    reducers: {
+        setProductDetails: (state) => {
+            state.productDetails = null;
+        }
+    },
+    extraReducers: (builder) => {
+        builder
+            .addCase(fetchAllFilteredProducts.pending, (state) => {
+                state.isLoading = true;
             })
-
-            .addCase(fetchProductDetails.pending, (state, action)=> {
-                state.isLoading = true
-            }).addCase(fetchProductDetails.fulfilled, (state, action)=> {
-                state.isLoading = false
-                state.productDetails = action.payload.data
-            }).addCase(fetchProductDetails.rejected, (state, action)=> {
-                state.isLoading = false
-                state.productDetails = null
+            .addCase(fetchAllFilteredProducts.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.productList = action.payload.data;
             })
-      }
-})
+            .addCase(fetchAllFilteredProducts.rejected, (state) => {
+                state.isLoading = false;
+                state.productList = [];
+            })
+            .addCase(fetchProductDetails.pending, (state) => {
+                state.isLoading = true;
+            })
+            .addCase(fetchProductDetails.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.productDetails = action.payload.data;
+            })
+            .addCase(fetchProductDetails.rejected, (state) => {
+                state.isLoading = false;
+                state.productDetails = null;
+            });
+    }
+});
 
-export const {setProductDetails} = shoppingProductSlice.actions;
+export const { setProductDetails } = shoppingProductSlice.actions;
 
 export default shoppingProductSlice.reducer;

@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser')
@@ -15,8 +16,7 @@ const shopReviewRouter = require('./routes/shop/review-routes');
 
 const commonFeaturesRouter = require('./routes/common/feature-routes');
 
-mongoose.connect('mongodb+srv://zayya4281:KyawZayYa1122@cluster0.gevpgb5.mongodb.net/ecomerse?retryWrites=true&w=majority')
-//mongoose.connect('mongodb://localhost:27017/eco')
+mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('Connected to MongoDb'))
     .catch(err => console.log(err));
 
@@ -24,7 +24,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin : "http://localhost:5173",
+    origin : process.env.CLIENT_URL,
     methods : ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders : [
         "Content-type",
@@ -53,6 +53,3 @@ app.use('/api/shop/reviews', shopReviewRouter);
 app.use('/api/common/feature', commonFeaturesRouter);
 
 app.listen(PORT , () => console.log("Server is running on port "+ PORT));
-
-
-//7 : 26

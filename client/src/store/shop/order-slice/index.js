@@ -1,113 +1,108 @@
-import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
 const initialState = {
-    approvalUrl : null,
-    isLoading : false,
-    orderId : null,
-    orderList : [],
-    orderDetails : null,
-}
+    approvalURL: null,
+    isLoading: false,
+    orderId: null,
+    orderList: [],
+    orderDetails: null,
+};
 
-export const createNewOrder =
-    createAsyncThunk(
+// Accessing the environment variable from .env
+const BASE_URL = import.meta.env.VITE_API_URL;
+
+export const createNewOrder = createAsyncThunk(
     "/order/createNewOrder",
-    async(orderData) => {
+    async (orderData) => {
         const response = await axios.post(
-            "http://localhost:5000/api/shop/order/create",
-            orderData,
-        )
+            `${BASE_URL}/shop/order/create`,
+            orderData
+        );
         return response.data;
     }
-)
+);
 
-export const capturePayment =
-    createAsyncThunk(
+export const capturePayment = createAsyncThunk(
     "/order/capturePayment",
-    async({paymentId, payerId, orderId}) => {
+    async ({ paymentId, payerId, orderId }) => {
         const response = await axios.post(
-            "http://localhost:5000/api/shop/order/capture",
-            {paymentId, payerId, orderId}
-        )
+            `${BASE_URL}/shop/order/capture`,
+            { paymentId, payerId, orderId }
+        );
         return response.data;
     }
-)
+);
 
+export const getAllOrdersByUserId = createAsyncThunk(
+    "/order/getAllOrdersByUserId",
+    async (userId) => {
+        const response = await axios.get(
+            `${BASE_URL}/shop/order/list/${userId}`
+        );
+        return response.data;
+    }
+);
 
-export const getAllOrdersByUserId =
-    createAsyncThunk(
-        "/order/getAllOrdersByUserId",
-        async(userId) => {
-            const response = await axios.get(
-                `http://localhost:5000/api/shop/order/list/${userId}`,
-            )
-            return response.data;
-        }
-    )
-
-export const getOlderDetails =
-    createAsyncThunk(
-        "/order/getOlderDetails",
-        async(id) => {
-            console.log(id)
-            const response = await axios.get(
-                `http://localhost:5000/api/shop/order/details/${id}`
-            )
-            return response.data;
-        }
-    )
+export const getOlderDetails = createAsyncThunk(
+    "/order/getOlderDetails",
+    async (id) => {
+        const response = await axios.get(
+            `${BASE_URL}/shop/order/details/${id}`
+        );
+        return response.data;
+    }
+);
 
 const shoppingOrderSlice = createSlice({
-    name : 'shoppingOrderSlice',
+    name: 'shoppingOrderSlice',
     initialState,
-    reducers : {
-        resetOrderDetails : (state) => {
+    reducers: {
+        resetOrderDetails: (state) => {
             state.orderDetails = null;
         }
     },
-    extraReducers : (builder) => {
+    extraReducers: (builder) => {
         builder
             .addCase(createNewOrder.pending, (state) => {
                 state.isLoading = true;
-            }).addCase(createNewOrder.fulfilled, (state, action) => {
+            })
+            .addCase(createNewOrder.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.approvalURL = action.payload.approvalURL;
                 state.orderId = action.payload.orderId;
-                sessionStorage.setItem('currentOrderId',JSON.stringify(action.payload.orderId));
-            } ).addCase(createNewOrder.rejected, (state) => {
+                sessionStorage.setItem('currentOrderId', JSON.stringify(action.payload.orderId));
+            })
+            .addCase(createNewOrder.rejected, (state) => {
                 state.isLoading = false;
                 state.approvalURL = null;
                 state.orderId = null;
             })
-
             .addCase(getAllOrdersByUserId.pending, (state) => {
                 state.isLoading = true;
             })
             .addCase(getAllOrdersByUserId.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.orderList = action.payload.data
+                state.orderList = action.payload.data;
             })
             .addCase(getAllOrdersByUserId.rejected, (state) => {
                 state.isLoading = false;
                 state.orderList = [];
             })
-
             .addCase(getOlderDetails.pending, (state) => {
                 state.isLoading = true;
             })
             .addCase(getOlderDetails.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.orderDetails = action.payload.data
+                state.orderDetails = action.payload.data;
             })
             .addCase(getOlderDetails.rejected, (state) => {
                 state.isLoading = false;
                 state.orderDetails = null;
-            })
+            });
     }
-})
+});
 
-export const {resetOrderDetails} = shoppingOrderSlice.actions;
+export const { resetOrderDetails } = shoppingOrderSlice.actions;
 
 export default shoppingOrderSlice.reducer;
-

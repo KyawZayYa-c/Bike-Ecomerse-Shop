@@ -48,21 +48,28 @@ export const addProductFormElements = [
         componentType : "input",
         type : "text",
         placeholder: "Enter product title",
-    },{
+    },
+    {
         label : "Description",
         name : "description",
         componentType : "textarea",
         placeholder : "Enter product description"
-    },{
+    },
+    {
         label : "Category",
         name  : "category",
         componentType : "select",
         options : [
-            {id : "men", label : "Men"},
-            {id : "women", label : "Women"},
-            {id : "kids" , label : "Kids"},
-            {id : "accessories", label : "Accessories"},
-            {id : "footwear", label : "Footwear"}
+            // ဆိုင်ကယ်အမျိုးအစားများ (ဘီးကြီးများအတွက်)
+            {id : "superbike", label : "Super Bike"},
+            {id : "nakedbike", label : "Naked Bike"},
+            {id : "adventure", label : "Adventure"},
+
+            // အသုံးအဆောင် အုပ်စု (၁) - ခေါင်းပိုင်း
+            {id : "headwear", label : "Helmet & Balaclava"},
+
+            // အသုံးအဆောင် အုပ်စု (၂) - ကိုယ်ထည်ပိုင်း
+            {id : "riding-gears", label : "Riding Gears"}
         ]
     },
     {
@@ -70,12 +77,18 @@ export const addProductFormElements = [
         name : "brand",
         componentType : "select",
         options : [
-            {id : "nike", label : "Nike"},
-            {id : "adidas", label : "Adidas"},
-            {id : "puma", label : "Puma"},
-            {id : "levi", label : "Levi"},
-            {id : "zara", label : "Zara"},
-            {id : "h&m", label : "H&m"},
+            // ဆိုင်ကယ် Brand များ
+            {id : "kawasaki", label : "Kawasaki"},
+            {id : "yamaha", label : "Yamaha"},
+            {id : "honda", label : "Honda "},
+            {id : "ducati", label : "Ducati"},
+            {id : "bmw", label : "BMW"},
+
+            // Gear/Helmet Brand များ
+            {id : "agv", label : "AGV"},
+            {id : "ls2", label : "LS2"},
+            {id : "alpinestars", label : "Alpinestars"},
+            {id : "dainese", label : "Dainese"}
         ]
     },
     {
@@ -109,31 +122,32 @@ export const shoppingViewHeaderMenuItems = [
     },
     {
         id : "products",
-        label : "Products",
+        label : "All Products",
         path : "/shop/listing",
     },
     {
-        id : "men",
-        label : "Men",
+        id : "superbike",
+        label : "Super Bike",
         path : "/shop/listing",
     },
     {
-        id : "women",
-        label : "Women",
+        id : "nakedbike",
+        label : "Naked Bike",
         path : "/shop/listing",
-
     },
     {
-        id : "kids",
-        label : "Kids",
+        id : "adventure",
+        label : "Adventure",
         path : "/shop/listing",
-    },{
-        id : "footwear",
-        label : "Footwear",
+    },
+    {
+        id : "headwear",
+        label : "Helmets",
         path : "/shop/listing",
-    },{
-        id : "accessories",
-        label : "Accessories",
+    },
+    {
+        id : "riding-gears",
+        label : "Gears",
         path : "/shop/listing",
     },
     {
@@ -144,37 +158,43 @@ export const shoppingViewHeaderMenuItems = [
 ];
 
 export const categoryOptionsMap = {
-    "men" : 'Men',
-    "women" : 'Women',
-    "kids" : 'Kids',
-    "accessories" : 'Accessories',
-    "footwear" : 'Footwear',
+    "superbike"    : 'Super Bike',
+    "nakedbike"    : 'Naked Bike',
+    "adventure"    : 'Adventure',
+    "headwear"     : 'Helmet & Balaclava',
+    "riding-gears" : 'Riding Gears',
 }
 
 export const brandOptionsMap = {
-    'nike' : 'Nike',
-    'adidas' : 'Adidas',
-    'puma' : 'Puma',
-    'levi' : 'Levi',
-    'zara' : 'Zara',
-    'h&m' : 'H&m',
+    'kawasaki'    : 'Kawasaki',
+    'yamaha'      : 'Yamaha',
+    'honda'       : 'Honda',
+    'ducati'      : 'Ducati',
+    'bmw'         : 'BMW',
+    'agv'         : 'AGV',
+    'ls2'         : 'LS2',
+    'alpinestars' : 'Alpinestars',
+    'dainese'     : 'Dainese',
 }
 
 export const filterOptions = {
     category : [
-        {id : "men", label : "Men"},
-        {id : "women", label : "Women"},
-        {id : "kids", label : "Kids"},
-        {id : "accessories", label : "Accessories"},
-        {id : "footwear", label : "Footwear"}
+        {id : "superbike", label : "Super Bike"},
+        {id : "nakedbike", label : "Naked Bike"},
+        {id : "adventure", label : "Adventure"},
+        {id : "headwear", label : "Helmet & Balaclava"},
+        {id : "riding-gears", label : "Riding Gears"}
     ],
     brand : [
-        {id : "nike", label : "Nike"},
-        {id : "adidas", label : "Adidas"},
-        {id : "puma", label : "Puma"},
-        {id : "levi", label : "Levi's"},
-        {id : "zara", label : "Zara"},
-        {id : "h&m", label : "H&m"},
+        {id : "kawasaki", label : "Kawasaki"},
+        {id : "yamaha", label : "Yamaha"},
+        {id : "honda", label : "Honda"},
+        {id : "ducati", label : "Ducati"},
+        {id : "bmw", label : "BMW"},
+        {id : "agv", label : "AGV"},
+        {id : "ls2", label : "LS2"},
+        {id : "alpinestars", label : "Alpinestars"},
+        {id : "dainese", label : "Dainese"}
     ],
 }
 
