@@ -1,5 +1,5 @@
 # Node version ကို ရွေးချယ်ခြင်း
-FROM node:18
+FROM node:20
 
 # Container ထဲမှာ /app ဆိုတဲ့ folder ဆောက်ပြီး အလုပ်လုပ်မယ်
 WORKDIR /app
