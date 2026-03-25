@@ -39,15 +39,15 @@ app.use(cookieParser());
 app.use(express.json());
 
 // API Routes များ
-app.use("/api/auth", authRouter);
-app.use("/api/admin/products", adminProductsRouter);
-app.use('/api/admin/orders', adminOrderRouter);
-app.use("/api/shop/products", shopProductsRouter);
-app.use("/api/shop/cart", shopCartRouter);
-app.use("/api/shop/address", shopAddressRouter);
-app.use("/api/shop/order", shopOrderRouter);
-app.use('/api/shop/search', shopSearchRouter);
-app.use('/api/shop/reviews', shopReviewRouter);
-app.use('/api/common/feature', commonFeaturesRouter);
+app.use("/auth", authRouter);
+app.use("/admin/products", adminProductsRouter);
+app.use('/admin/orders', adminOrderRouter);
+app.use("/shop/products", shopProductsRouter);
+app.use("/shop/cart", shopCartRouter);
+app.use("/shop/address", shopAddressRouter);
+app.use("/shop/order", shopOrderRouter);
+app.use('/shop/search', shopSearchRouter);
+app.use('/shop/reviews', shopReviewRouter);
+app.use('/common/feature', commonFeaturesRouter);
 
 app.listen(PORT , () => console.log("Server is running on port " + PORT));
