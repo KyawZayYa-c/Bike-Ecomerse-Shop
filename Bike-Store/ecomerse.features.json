@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "6980231de6d48b86c0295db8"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770005227/sc0ie4rdwvfhcyk0bxd3.jpg",
+  "createdAt": {
+    "$date": "2026-02-02T04:07:57.098Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T04:07:57.098Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698023a1e6d48b86c0295dc0"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770005307/hjepvygrnfjzpqifryxi.jpg",
+  "createdAt": {
+    "$date": "2026-02-02T04:10:09.402Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T04:10:09.402Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698081d4b791535dac80c49b"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770029476/h9uiyygggjfzkq2px0fo.jpg",
+  "createdAt": {
+    "$date": "2026-02-02T10:52:04.516Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T10:52:04.516Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808225b791535dac80c49e"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770029551/cyvxtdkgxjitfc4is1uv.jpg",
+  "createdAt": {
+    "$date": "2026-02-02T10:53:25.258Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T10:53:25.258Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808355b791535dac80c4a8"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770029858/hi64ixpfbyeirqayp0sj.jpg",
+  "createdAt": {
+    "$date": "2026-02-02T10:58:29.208Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T10:58:29.208Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6982bb80787c75589235a361"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770175311/tthrov2ndem5qs7vrxz7.jpg",
+  "createdAt": {
+    "$date": "2026-02-04T03:22:40.720Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-04T03:22:40.720Z"
+  },
+  "__v": 0
+}]

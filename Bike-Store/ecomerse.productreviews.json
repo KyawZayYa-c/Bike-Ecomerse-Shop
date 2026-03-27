@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "6982a485ac6c25f18eeda732"
+  },
+  "productId": "69808addb791535dac80c4dc",
+  "userId": "697eefd82056932f5de8fb87",
+  "userName": "Aung Aung",
+  "reviewMessage": "Something",
+  "reviewValue": 4,
+  "createdAt": {
+    "$date": "2026-02-04T01:44:37.074Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-04T01:44:37.074Z"
+  },
+  "__v": 0
+}]

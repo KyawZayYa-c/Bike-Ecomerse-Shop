@@ -1,0 +1,140 @@
+[{
+  "_id": {
+    "$oid": "696261ab3e03e1079ae98879"
+  },
+  "username": "Jane Smith",
+  "email": "jane32@gmail.com",
+  "password": "$2b$10$k//Vv45CXsBzZAwAPXKeveHeyymgqcm1xdB1BWy0QJz.YDR2.T.WG",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6962f104d711712d75afd372"
+  },
+  "username": "tester1",
+  "email": "tester1@gmail.com",
+  "password": "$2b$10$VzujUsovYCFZ6D0cR8JYZOMtv9CiPsx3Samrb2mVlguTm96Bj5Z/W",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6962f20cd711712d75afd374"
+  },
+  "username": "admin",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$MLU4GoUiSbKYbunEr6.AR.Ey7/irFJh6eNOyMLMYVbHtK9WGteK2i",
+  "role": "admin",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "696b436ecf795516ef995226"
+  },
+  "username": "Tester One",
+  "email": "test1@gmail.com",
+  "password": "$2b$10$fAZ/yGiYiT5Wl2QUj7JPJOqZ6Hd9dq/9QpxU6DRa84y8F8L2xkcHC",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "697eee242056932f5de8fb45"
+  },
+  "username": "tester2",
+  "email": "tester2@gmail.com",
+  "password": "$2b$10$CneRoM5AXCTsp2S0bhVji.XWSpktEuf5UQPsWehUubWkZhUAohMRa",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "697eefd82056932f5de8fb87"
+  },
+  "username": "Aung Aung",
+  "email": "aung@gmail.com",
+  "password": "$2b$10$nwgVdgxXCQ/eB1yfccIOQOjBgt..uL5pOtC8MZQbOfm0vOU62MIyW",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698aae3a1aa5b7983d45df7a"
+  },
+  "username": "Kyaw Zay Ya",
+  "email": "zayya4281@gmail.com",
+  "password": "$2b$10$5/Bp2GwgngtqIrIAli4JpuRXPvWTrJJ9ITqhSfDSTs7X6MfcaS81y",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698aafa81aa5b7983d45df8d"
+  },
+  "username": "Phyo Paing ",
+  "email": "pyae30522@gmail.com",
+  "password": "$2b$10$Jeq9Iof4ajLHqfcwD46i8O4pNDOb.z2Hs1Nqzh0JkKfoRJ8zsuQ0i",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698ab2611aa5b7983d45dfde"
+  },
+  "username": "Thadar",
+  "email": "eithadarmaung53@gmail.com",
+  "password": "$2b$10$stWEQGP2Rb0IN2qMHdqCaeKz6lKDR4Ie.TYhAr0iWCkttiuzXC0Ze",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698ab2721aa5b7983d45dfe3"
+  },
+  "username": "Phyu",
+  "email": "pp@gmail.com",
+  "password": "$2b$10$6Rfq1.OFKyOKsXA3JdS5zOkSzJU5h3EgVwKP7B.btiEKOOnBaYG8O",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698ab2921aa5b7983d45e000"
+  },
+  "username": "WWM",
+  "email": "winwin@gmail.com",
+  "password": "$2b$10$FYUJ.21BMr0k9JnWU0fKUuYS5dX5EbQ1/XQEJ3uGoW346sn6VNmWG",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698ab2a21aa5b7983d45e004"
+  },
+  "username": "Eaint Khet",
+  "email": "eaintkhet123@gmail.com",
+  "password": "$2b$10$F58RnIefzFZYiXmODX8Iou6oVTaLFXKt6Cj2N9eTI4bbLZbdleCGW",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698ab2a71aa5b7983d45e008"
+  },
+  "username": "Ei Thadar Maung",
+  "email": "eithadarmaung553@gmail.com",
+  "password": "$2b$10$xIRBC06XU0e9rt4gATixauXTP8mt0BOh9e0XnDkNZzkfoiqLPlaje",
+  "role": "user",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698ab3391aa5b7983d45e035"
+  },
+  "username": "chawwai",
+  "email": "chawwai@gmail.com",
+  "password": "$2b$10$OkiLrIaL7c7dMYLtqxQ5ROwmkuK//nAHd0gqFc6yzrKkB2gP./hKK",
+  "role": "user",
+  "__v": 0
+}]

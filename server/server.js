@@ -24,7 +24,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-    origin : process.env.CLIENT_URL,
+    origin: "http://localhost:5173",
     methods : ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders : [
         "Content-type",
@@ -53,3 +53,4 @@ app.use('/api/shop/reviews', shopReviewRouter);
 app.use('/api/common/feature', commonFeaturesRouter);
 
 app.listen(PORT , () => console.log("Server is running on port "+ PORT));
+//MONGO_URI=mongodb://127.0.0.1:27017/bike-shop

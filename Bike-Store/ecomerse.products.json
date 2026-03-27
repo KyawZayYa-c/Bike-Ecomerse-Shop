@@ -1,0 +1,680 @@
+[{
+  "_id": {
+    "$oid": "6980239ae6d48b86c0295dbd"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770005317/fsdb17cs35xglhxxzpjd.jpg",
+  "title": "R15 V3",
+  "description": "Bike",
+  "category": "superbike",
+  "brand": "yamaha",
+  "price": 199,
+  "salePrice": 0,
+  "totalStock": 10,
+  "createdAt": {
+    "$date": "2026-02-02T04:10:02.987Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T04:10:02.987Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698023d4e6d48b86c0295dc3"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770005398/z585uapislibhls0dnqn.jpg",
+  "title": "Kawaski",
+  "description": "Bike",
+  "category": "nakedbike",
+  "brand": "kawasaki",
+  "price": 299,
+  "salePrice": 290,
+  "totalStock": 5,
+  "createdAt": {
+    "$date": "2026-02-02T04:11:00.498Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T04:11:00.498Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808446b791535dac80c4ad"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770030025/cbg0uu3uwylbey7ivkvw.jpg",
+  "title": "Kawasaki",
+  "description": "Kawakaki ",
+  "category": "superbike",
+  "brand": "kawasaki",
+  "price": 400,
+  "salePrice": 389,
+  "totalStock": 15,
+  "createdAt": {
+    "$date": "2026-02-02T11:02:30.477Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:03:20.677Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698084f0b791535dac80c4b3"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770030180/dcmqfg0po0gq30mcmarh.jpg",
+  "title": "Ninja",
+  "description": "Ninja",
+  "category": "superbike",
+  "brand": "kawasaki",
+  "price": 199,
+  "salePrice": 189,
+  "totalStock": 15,
+  "createdAt": {
+    "$date": "2026-02-02T11:05:20.120Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:05:20.120Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6980853bb791535dac80c4b6"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770030287/y3x54h8n8dfh1y81zpcm.jpg",
+  "title": "Ducati",
+  "description": "z-1000",
+  "category": "superbike",
+  "brand": "ducati",
+  "price": 250,
+  "salePrice": 0,
+  "totalStock": 9,
+  "createdAt": {
+    "$date": "2026-02-02T11:06:35.490Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-04T01:43:50.883Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6980858cb791535dac80c4bc"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770030390/z7odtaxb4czz2zd7mqks.jpg",
+  "title": "Suzuki",
+  "description": "Suzuki",
+  "category": "superbike",
+  "brand": "ducati",
+  "price": 599,
+  "salePrice": 0,
+  "totalStock": 4,
+  "createdAt": {
+    "$date": "2026-02-02T11:07:56.779Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-04T04:09:35.136Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808677b791535dac80c4c7"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770030634/zqcwsxcmrhxp1qnqauaw.jpg",
+  "title": "Honda 150",
+  "description": "Honda 150",
+  "category": "superbike",
+  "brand": "honda",
+  "price": 235,
+  "salePrice": 230,
+  "totalStock": 7,
+  "createdAt": {
+    "$date": "2026-02-02T11:11:51.817Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:11:51.817Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698087a9b791535dac80c4ca"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770030681/vnwqajgeclo1cvotthc3.jpg",
+  "title": "MT-15",
+  "description": "MT-15",
+  "category": "nakedbike",
+  "brand": "yamaha",
+  "price": 200,
+  "salePrice": 0,
+  "totalStock": 5,
+  "createdAt": {
+    "$date": "2026-02-02T11:16:57.919Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:16:57.919Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808831b791535dac80c4cd"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770031071/zvyjxliq8qjjpekpqotu.jpg",
+  "title": "MT 15",
+  "description": "MT 15",
+  "category": "nakedbike",
+  "brand": "yamaha",
+  "price": 200,
+  "salePrice": 0,
+  "totalStock": 7,
+  "createdAt": {
+    "$date": "2026-02-02T11:19:13.851Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:19:13.851Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698088c4b791535dac80c4d0"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770031216/kg1anmnofxsr4h0eiqxb.jpg",
+  "title": "Honda CB1000R",
+  "description": "Honda CB1000R",
+  "category": "nakedbike",
+  "brand": "honda",
+  "price": 599,
+  "salePrice": 0,
+  "totalStock": 10,
+  "createdAt": {
+    "$date": "2026-02-02T11:21:40.170Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:21:40.170Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808997b791535dac80c4d3"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770031389/ii73ekkvgh9vziyfgbwy.jpg",
+  "title": "suzuki gsx-s1000",
+  "description": "suzuki gsx-s1000",
+  "category": "nakedbike",
+  "brand": "ducati",
+  "price": 400,
+  "salePrice": 389,
+  "totalStock": 15,
+  "createdAt": {
+    "$date": "2026-02-02T11:25:11.080Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:25:47.942Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808a43b791535dac80c4d9"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770031588/t7ej0oee2ttwo1h5l8vo.jpg",
+  "title": "yamaha mt 10",
+  "description": "yamaha mt 10",
+  "category": "nakedbike",
+  "brand": "yamaha",
+  "price": 300,
+  "salePrice": 280,
+  "totalStock": 5,
+  "createdAt": {
+    "$date": "2026-02-02T11:28:03.088Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:28:03.088Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808addb791535dac80c4dc"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770031654/xqronztapqrymepxxqmc.jpg",
+  "title": "MT 15",
+  "description": "Yamaha MT 15",
+  "category": "nakedbike",
+  "brand": "yamaha",
+  "price": 500,
+  "salePrice": 0,
+  "totalStock": 13,
+  "createdAt": {
+    "$date": "2026-02-02T11:30:37.248Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-04T01:44:37.200Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808b44b791535dac80c4df"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770031818/fg1ubu4y8tujrmyydno5.jpg",
+  "title": "FZ V4",
+  "description": "FZ V4",
+  "category": "nakedbike",
+  "brand": "yamaha",
+  "price": 300,
+  "salePrice": 0,
+  "totalStock": 9,
+  "createdAt": {
+    "$date": "2026-02-02T11:32:20.535Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-04T04:09:35.764Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808bb0b791535dac80c4e2"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770031925/glp8smngneczre45woms.jpg",
+  "title": "FZ v3",
+  "description": "FZ v3",
+  "category": "nakedbike",
+  "brand": "yamaha",
+  "price": 99,
+  "salePrice": 0,
+  "totalStock": 5,
+  "createdAt": {
+    "$date": "2026-02-02T11:34:08.196Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:34:08.196Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808bf2b791535dac80c4e5"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770032034/ou9vbi7ft9pecqtzqijt.jpg",
+  "title": "Honda 650",
+  "description": "Honda 650",
+  "category": "superbike",
+  "brand": "honda",
+  "price": 500,
+  "salePrice": 459,
+  "totalStock": 5,
+  "createdAt": {
+    "$date": "2026-02-02T11:35:14.409Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-04T01:43:50.698Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808ee4b791535dac80c4f9"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770032783/dvnppxnkmztfilxtv0zj.jpg",
+  "title": "BMW i 1250",
+  "description": "BMW i 1250",
+  "category": "adventure",
+  "brand": "bmw",
+  "price": 700,
+  "salePrice": 679,
+  "totalStock": 7,
+  "createdAt": {
+    "$date": "2026-02-02T11:47:48.563Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:47:48.563Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808f8bb791535dac80c519"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770032938/konzhqokywhn4sdetscc.jpg",
+  "title": "Thun Der",
+  "description": "Thun Der",
+  "category": "headwear",
+  "brand": "ls2",
+  "price": 12,
+  "salePrice": 0,
+  "totalStock": 10,
+  "createdAt": {
+    "$date": "2026-02-02T11:50:35.191Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:50:35.191Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69808fc9b791535dac80c51c"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770033001/xd7xuozmlm0hqozvyds8.jpg",
+  "title": "MT Helmet",
+  "description": "MT Helmet",
+  "category": "headwear",
+  "brand": "agv",
+  "price": 13,
+  "salePrice": 0,
+  "totalStock": 10,
+  "createdAt": {
+    "$date": "2026-02-02T11:51:37.523Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:51:37.523Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69809009b791535dac80c51f"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770033073/qyhnjfizsjk0xlmmvap2.jpg",
+  "title": "Mask",
+  "description": "Mask",
+  "category": "headwear",
+  "brand": "dainese",
+  "price": 7,
+  "salePrice": 5,
+  "totalStock": 50,
+  "createdAt": {
+    "$date": "2026-02-02T11:52:41.708Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:52:41.708Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6980904cb791535dac80c522"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770033153/wa8qw3sa1qskzbeg4jsc.jpg",
+  "title": "Mask V",
+  "description": "Mask V",
+  "category": "headwear",
+  "brand": "alpinestars",
+  "price": 6,
+  "salePrice": 0,
+  "totalStock": 49,
+  "createdAt": {
+    "$date": "2026-02-02T11:53:48.231Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:53:48.231Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698090a0b791535dac80c525"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770033196/qszcueqtmblqvhykuhbt.jpg",
+  "title": "TWL leader",
+  "description": "TWL leader",
+  "category": "headwear",
+  "brand": "alpinestars",
+  "price": 20,
+  "salePrice": 18,
+  "totalStock": 30,
+  "createdAt": {
+    "$date": "2026-02-02T11:55:12.558Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:55:12.558Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698090d5b791535dac80c528"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770033289/jtrdlfzujplj9ynffqkl.jpg",
+  "title": "Mask Half",
+  "description": "Mask Half",
+  "category": "headwear",
+  "brand": "dainese",
+  "price": 9,
+  "salePrice": 0,
+  "totalStock": 48,
+  "createdAt": {
+    "$date": "2026-02-02T11:56:05.623Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-04T05:56:08.211Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6980916cb791535dac80c542"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770033383/d0il9ks36k5xrmfojtxx.jpg",
+  "title": "Gloves",
+  "description": "Gloves",
+  "category": "riding-gears",
+  "brand": "dainese",
+  "price": 10,
+  "salePrice": 8,
+  "totalStock": 7,
+  "createdAt": {
+    "$date": "2026-02-02T11:58:36.049Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:58:36.049Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698091b0b791535dac80c545"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770033480/lq0bmmcthfgqnpjw7oem.jpg",
+  "title": "Gloves Moto",
+  "description": "Gloves Moto",
+  "category": "riding-gears",
+  "brand": "alpinestars",
+  "price": 15,
+  "salePrice": 0,
+  "totalStock": 30,
+  "createdAt": {
+    "$date": "2026-02-02T11:59:44.711Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T11:59:44.711Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698091eeb791535dac80c548"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770033550/gfgtw2vnryh4iy5k46mx.jpg",
+  "title": "Shoe Guards",
+  "description": "Shoe Guards",
+  "category": "riding-gears",
+  "brand": "ls2",
+  "price": 14,
+  "salePrice": 0,
+  "totalStock": 10,
+  "createdAt": {
+    "$date": "2026-02-02T12:00:46.280Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T12:00:46.280Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69809222b791535dac80c54b"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770033614/u1plpflcsefcadqgzxsq.jpg",
+  "title": "hands Guards",
+  "description": "hands Guards",
+  "category": "riding-gears",
+  "brand": "agv",
+  "price": 18,
+  "salePrice": 0,
+  "totalStock": 17,
+  "createdAt": {
+    "$date": "2026-02-02T12:01:38.810Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T12:01:38.810Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6980925fb791535dac80c54e"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770033668/opidt6ch5vhc79egf3fd.jpg",
+  "title": "Bike T shirt Apparel",
+  "description": "Bike T shirt Apparel",
+  "category": "riding-gears",
+  "brand": "agv",
+  "price": 49,
+  "salePrice": 45,
+  "totalStock": 10,
+  "createdAt": {
+    "$date": "2026-02-02T12:02:39.808Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T12:02:39.808Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698092aeb791535dac80c551"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770033747/svgacbkctouboti2u35s.jpg",
+  "title": "Bike  Apparel",
+  "description": "Bike T shirt Apparel",
+  "category": "riding-gears",
+  "brand": "alpinestars",
+  "price": 30,
+  "salePrice": 0,
+  "totalStock": 8,
+  "createdAt": {
+    "$date": "2026-02-02T12:03:58.318Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T12:03:58.318Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698093a6b791535dac80c58e"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770033979/gepft5cjddfbyvt7l1qp.jpg",
+  "title": "BMW R 1250",
+  "description": "BMW R 1250",
+  "category": "adventure",
+  "brand": "bmw",
+  "price": 500,
+  "salePrice": 489,
+  "totalStock": 9,
+  "createdAt": {
+    "$date": "2026-02-02T12:08:06.186Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T12:08:06.186Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69809460b791535dac80c591"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770034131/oigbzu6f5ilvwvtpp2uf.jpg",
+  "title": "KTM 1290",
+  "description": "KTM 1290",
+  "category": "adventure",
+  "brand": "ducati",
+  "price": 500,
+  "salePrice": 480,
+  "totalStock": 20,
+  "createdAt": {
+    "$date": "2026-02-02T12:11:12.660Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T12:11:12.660Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "698094e9b791535dac80c594"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770034323/hnrmi2b6kzka5m3e4eg2.jpg",
+  "title": "Crf 250 rally",
+  "description": "Crf 250 rally",
+  "category": "adventure",
+  "brand": "honda",
+  "price": 460,
+  "salePrice": 420,
+  "totalStock": 15,
+  "createdAt": {
+    "$date": "2026-02-02T12:13:29.095Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-02T12:13:29.095Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6982a3f4ac6c25f18eeda6e3"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770169250/ee3pvnugtthj0gidk3xo.jpg",
+  "title": "MT 150",
+  "description": "MT 150",
+  "category": "nakedbike",
+  "brand": "kawasaki",
+  "price": 300,
+  "salePrice": 280,
+  "totalStock": 7,
+  "createdAt": {
+    "$date": "2026-02-04T01:42:12.107Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-04T01:42:12.107Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6982bc6b787c75589235a365"
+  },
+  "image": "http://res.cloudinary.com/dg52gsebs/image/upload/v1770175390/mzuuuibitn0owzqjvuhc.jpg",
+  "title": "NXR 2",
+  "description": "NXR 2",
+  "category": "riding-gears",
+  "brand": "dainese",
+  "price": 30,
+  "salePrice": 0,
+  "totalStock": 9,
+  "createdAt": {
+    "$date": "2026-02-04T03:26:35.495Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-04T03:28:03.224Z"
+  },
+  "__v": 0
+}]
