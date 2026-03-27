@@ -1,5 +1,4 @@
 const Feature = require('../../models/Feature');
-const {models} = require("mongoose");
 
 const addFeatureImages= async (req, res) => {
     try{
